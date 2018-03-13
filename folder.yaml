@@ -1,0 +1,11 @@
+---
+YamlDesc: FOLDER-YAML
+Slug: java
+GenerateTemplateFlag: false
+GenerateFolderNavURLNamesJS: false
+ProcessFilePathList:
+    - index.md
+    - factory-method-pattern.txt
+    - singleton-pattern.txt
+    - builder-pattern.txt
+---
