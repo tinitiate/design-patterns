@@ -1,21 +1,20 @@
-// >---
-// >YamlDesc: CONTENT-ARTICLE
-// >Title: Java Design Patterns Singleton Pattern
-// >MetaDescription: Java Design Patterns Singleton Pattern
-// >MetaKeywords: Java Design Patterns Singleton Pattern example code, tutorials
-// >Author: Venkata Bhattaram / tinitiate.com
-// >ContentName: singleton-pattern
-// >---
+---
+Title: Java Design Patterns Singleton Pattern
+MetaKeywords: Java Design Patterns Singleton Pattern example code, tutorials
+Author: Venkata Bhattaram | github.com/tinitiate
+ContentName: singleton-pattern
+---
 
-// ># Java Design Patterns Singleton Pattern
-// >* Singleton design pattern is intended to create only **ONE INSTANCE OF A CLASS**
-// >* This is useful in situations where the requirement demands to create 
-// >  only a SINGLE POINT of access of a resource or class.
-// >* Some practical use cases of singleton pattern are creating a Global Logger,
-// >  a caching mechanism, reading configuration and settings data.
+# Java Design Patterns Singleton Pattern
+* Singleton design pattern is intended to create only **ONE INSTANCE OF A CLASS**
+* This is useful in situations where the requirement demands to create 
+  only a SINGLE POINT of access of a resource or class.
+* Some practical use cases of singleton pattern are creating a Global Logger,
+  a caching mechanism, reading configuration and settings data.
 
-// >## Demonstration of Singleton Cache
-// >```
+## Demonstration of Singleton Cache
+> ClassicSingletonCache.java
+```java
 package com.tinitiate.designpatterns.singleton;
 
 import java.util.LinkedList;
@@ -57,12 +56,13 @@ public class ClassicSingletonCache {
     }
 
  }
-// >```
+```
 
-// >## SingleTon Caller
-// >* This class demonstrates the SingleTon being called,
-// >* No matter how many instances are created all Objects share the same values.
-// >```
+## SingleTon Caller
+* This class demonstrates the SingleTon being called,
+* No matter how many instances are created all Objects share the same values.
+> .ClassicSingleonCacheCaller.java
+```java
 package com.tinitiate.designpatterns.singleton;
 
 public class ClassicSingleonCacheCaller {
@@ -85,4 +85,4 @@ public class ClassicSingleonCacheCaller {
         }
     }
 }
-// >```
+```
