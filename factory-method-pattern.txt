@@ -1,48 +1,47 @@
-// >---
-// >YamlDesc: CONTENT-ARTICLE
-// >Title: Java Design Patterns Factory Method Pattern
-// >MetaDescription: Java Design Patterns Factory Method Pattern
-// >MetaKeywords: Java Design Patterns Factory Method Pattern example code, tutorials
-// >Author: Venkata Bhattaram / tinitiate.com
-// >ContentName: factory-method-pattern
-// >---
+---
+Title: Java Design Patterns Factory Method Pattern
+MetaKeywords: Java Design Patterns Factory Method Pattern example code, tutorials
+Author: Venkata Bhattaram / tinitiate.com
+ContentName: factory-method-pattern
+---
 
-// ># JAVA DESIGN PATTERNS FACTORY METHOD PATTERN
-// >* The **FACTORY METHOD DESIGN PATTERN** is a **CLASS** called as 
-// >  **factory class** It should have a method, that returns Object of an 
-// >  **Abstract Class** or **Interface**
-// >* Also the **Abstract Class** or **Interface** are extended or implemented 
-// >  by many classes.
-// >* The Factory Method Pattern is also known as Virtual Constructor.
-// >* **FACTORY CLASS**
-// >* Creates objects without exposing the instantiation logic to the client 
-// >  (caller class that wants to create an object).
-// >* **FACTORY METHOD**
-// >* Define an interface for creating an object, Define classes to 
-// >  implement the interface, but let the caller class to decide which class
-// >  object to instantiate.
-// >* The Factory empowers the caller class to create the Object it requires.
+# JAVA DESIGN PATTERNS FACTORY METHOD PATTERN
+* The **FACTORY METHOD DESIGN PATTERN** is a **CLASS** called as 
+  **factory class** It should have a method, that returns Object of an 
+  **Abstract Class** or **Interface**
+* Also the **Abstract Class** or **Interface** are extended or implemented 
+  by many classes.
+* The Factory Method Pattern is also known as Virtual Constructor.
+* **FACTORY CLASS**
+* Creates objects without exposing the instantiation logic to the client 
+  (caller class that wants to create an object).
+* **FACTORY METHOD**
+* Define an interface for creating an object, Define classes to 
+  implement the interface, but let the caller class to decide which class
+  object to instantiate.
+* The Factory empowers the caller class to create the Object it requires.
 
 
-// >## JAVA DESIGN PATTERNS FACTORY METHOD PATTERN WITH INTERFACE
-// >* This example demonstrates an interface of **Loans**
-// >* The **objective** of this example is to get interest rates of various 
-// >  Loan types such as Auto Loan, Home Loan and Personal Loan.
-// >>
-// >* **STEP 1.**
-// >* Create Interface
-// >```
+## JAVA DESIGN PATTERNS FACTORY METHOD PATTERN WITH INTERFACE
+* This example demonstrates an interface of **Loans**
+* The **objective** of this example is to get interest rates of various 
+  Loan types such as Auto Loan, Home Loan and Personal Loan.
+* **STEP 1.**
+* Create Interface
+> Loans.java
+```java
 package com.tinitiate.designpatterns.factory;
 
 public interface Loans {
 
     public double getInterestRate();
 }
-// >```
-// >>
+```
+>
 
-// >* **STEP 2.** Create `AutoLoan` Implementation class
-// >```
+* **STEP 2.** Create `AutoLoan` Implementation class
+> AutoLoan.java
+```java
 package com.tinitiate.designpatterns.factory;
 
 // Implement the Interface "Loans"
@@ -54,11 +53,11 @@ public class AutoLoan implements Loans {
         return 5.5;
     }
 }
-// >```
-// >>
+```
 
-// >* **STEP 2.** Create `HomeLoan` Implementation class
-// >```
+* **STEP 2.** Create `HomeLoan` Implementation class
+> HomeLoan.java
+```java
 package com.tinitiate.designpatterns.factory;
 
 // Implement the Interface "Loans"
@@ -70,11 +69,11 @@ public class HomeLoan implements Loans {
         return 7.5;
     }
 }
-// >```
-// >>
+```
 
-// >* **STEP 3.** Create `PersonalLoan` Implementation class
-// >```
+* **STEP 3.** Create `PersonalLoan` Implementation class
+> PersonalLoan.java
+```java
 package com.tinitiate.designpatterns.factory;
 
 // Implement the Interface "Loans"
@@ -86,12 +85,13 @@ public class PersonalLoan implements Loans {
         return 2.5;
     }
 }
-// >```
-// >>
+```
 
-// >* **STEP 4.** Create the Factory Class This class will generate Objects of 
-// >  the above implementations `Loans` interface
-// >```
+
+* **STEP 4.** Create the Factory Class This class will generate Objects of 
+  the above implementations `Loans` interface
+> LoanInterfaceFactory.java
+```
 package com.tinitiate.designpatterns.factory;
 
 public class LoanInterfaceFactory {
@@ -115,13 +115,14 @@ public class LoanInterfaceFactory {
     return null;  
   }
 }
-// >```
-// >>
+```
 
-// >* **STEP 5.** Create the Class that consumes the Objects
-// >* This is the clas that has the **MAIN** method and running this will 
-// >  demonstrate the **FACTORY PATTERN** using Interface
-// >```
+
+* **STEP 5.** Create the Class that consumes the Objects
+* This is the clas that has the **MAIN** method and running this will 
+  demonstrate the **FACTORY PATTERN** using Interface
+> FactoryInterfaceTester.java
+```java
 package com.tinitiate.designpatterns.factory;
 
 // This is the Class that Uses the Factory
@@ -157,28 +158,29 @@ public class FactoryInterfaceTester {
         System.out.println("Personal Loan Rate: " + ObjPersonalLoan.getInterestRate());
     }
 }
-// >```
-// >>
+```
 
-// >## JAVA DESIGN PATTERNS FACTORY METHOD PATTERN WITH ABSTRACT CLASS
-// >* This example demonstrates an abstract of **MinimumAge**
-// >* The **objective** of this example is to get minimum age for various 
-// >  activities, Such as Minimum Age for driving, Minimum Age for voting
-// >>
-// >* **STEP 1.** Create Abstract Class
-// >```
+
+## JAVA DESIGN PATTERNS FACTORY METHOD PATTERN WITH ABSTRACT CLASS
+* This example demonstrates an abstract of **MinimumAge**
+* The **objective** of this example is to get minimum age for various 
+  activities, Such as Minimum Age for driving, Minimum Age for voting
+* **STEP 1.** Create Abstract Class
+> MinimumAge.java
+```java
 package com.tinitiate.designpatterns.factory;
 
 abstract class MinimumAge {
 
     abstract int getMinimumAge();
 }
-// >```
-// >>
+```
+>
 
-// >* **STEP 2.** Create `MinimumDrivingAge` class, This Class that Extends 
-// >  the Abstract Class
-// >```
+* **STEP 2.** Create `MinimumDrivingAge` class, This Class that Extends 
+  the Abstract Class
+> MinimumDrivingAge.java
+```java
 package com.tinitiate.designpatterns.factory;
 
 public class MinimumDrivingAge extends MinimumAge {
@@ -188,12 +190,13 @@ public class MinimumDrivingAge extends MinimumAge {
         return 16;
    }
 }
-// >```
-// >>
+```
 
-// >* **STEP 3.** Create `MinimumVotingAge` class, This Class that Extends 
-// >  the Abstract Class
-// >```
+
+* **STEP 3.** Create `MinimumVotingAge` class, This Class that Extends 
+  the Abstract Class
+> MinimumVotingAge.java
+```java
 package com.tinitiate.designpatterns.factory;
 
 public class MinimumVotingAge {
@@ -203,12 +206,13 @@ public class MinimumVotingAge {
         return 18;
    }
 }
-// >```
-// >>
+```
 
-// >* **STEP 4.** Create the Factory Class This class will generate Objects of 
-// >  the above implementations `MinimumAge` Abstract Class
-// >```
+
+* **STEP 4.** Create the Factory Class This class will generate Objects of 
+  the above implementations `MinimumAge` Abstract Class
+> MinimumAgeFactory.java
+```java
 package com.tinitiate.designpatterns.factory;
 
 // This is the Class that Uses the Factory
@@ -231,13 +235,14 @@ public class MinimumAgeFactory {
     return null;  
   }
 }
-// >```
-// >>
+```
 
-// >* **STEP 5.** Create the Class that consumes the Objects
-// >* This is the clas that has the **MAIN** method and running this will 
-// >  demonstrate the **FACTORY PATTERN** using Abstract Class
-// >```
+
+* **STEP 5.** Create the Class that consumes the Objects
+* This is the clas that has the **MAIN** method and running this will 
+  demonstrate the **FACTORY PATTERN** using Abstract Class
+> FactoryAbstractClassTester.java
+```java
 package com.tinitiate.designpatterns.factory;
 
 public class FactoryAbstractClassTester {
@@ -267,4 +272,4 @@ public class FactoryAbstractClassTester {
         System.out.println("Minimum voting Age: " + ObjVotingAge.getMinimumAge());
     }
 }
-// >```
+```
