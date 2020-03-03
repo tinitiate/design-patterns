@@ -61,7 +61,7 @@ public class ClassicSingletonCache {
 ## SingleTon Caller
 * This class demonstrates the SingleTon being called,
 * No matter how many instances are created all Objects share the same values.
-> .ClassicSingleonCacheCaller.java
+> ClassicSingleonCacheCaller.java
 ```java
 package com.tinitiate.designpatterns.singleton;
 
