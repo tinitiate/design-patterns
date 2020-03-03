@@ -14,13 +14,13 @@ ContentName: index
   developer community.
 
 ## Philosophy of Design patterns 
-* 1. Program to an interface not an implementation
+1. Program to an interface not an implementation
   * Interface is like a template or a design and Implementation is 
     the actual code, Consider Sort() as Interface and implementation of Sort()
     could be QuickSort() or RadixSort().
   * This means there could be a better implementation for a given purpose 
     but declaring the purpose itself is important.
-* 2. Favor object composition over inheritance  
+2. Favor object composition over inheritance  
   * Object Composition is the objective that classes must provide polymorphism.
     Inheritance feature provides access of parent class members to a childclass.
     Polymorphism feature provides the ability to change the behaviour of a
