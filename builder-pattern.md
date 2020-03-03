@@ -1,37 +1,36 @@
-// >---
-// >YamlDesc: CONTENT-ARTICLE
-// >Title: Java Design Patterns Builder Method Pattern
-// >MetaDescription: Java Design Patterns Builder Method Pattern
-// >MetaKeywords: Java Design Patterns Builder Method Pattern example code, tutorials
-// >Author: Venkata Bhattaram / tinitiate.com
-// >ContentName: builder-method-pattern
-// >---
+---
+Title: Java Design Patterns Builder Method Pattern
+MetaKeywords: Java Design Patterns Builder Method Pattern example code, tutorials
+Author: Venkata Bhattaram | github.com/tinitiate
+ContentName: builder-method-pattern
+---
 
-// ># JAVA DESIGN PATTERNS BUILDER METHOD PATTERN
-// >* The Builder design pattern primarily addresses the following:
-// > * Class (the same construction process) creates different representations 
-// >   of a complex object.
-// > * Class creating a complex object is simplified.
-// >* Builder Pattern is the process to create a complex object from underlying 
-// >  simple objects using a step-by-step approach.
-// >* A simple example would be, Consider a Class with Setter and Getter Methods,
-// >  Instead of regular Setters with a Void return Type, imagine a Setter which
-// >  returns the whole Object itself.
-// >* This pattern is useful when object cannot be created in single step 
-// >  such as object de-serialization.
-// >* **Advantages of Builder Pattern**
-// >* It provides clear separation between object construction and representation.
-// >* It provides control over steps of construction process.
-// >* It enables varying object's internal representation.
+# JAVA DESIGN PATTERNS BUILDER METHOD PATTERN
+* The Builder design pattern primarily addresses the following:
+ * Class (the same construction process) creates different representations 
+   of a complex object.
+ * Class creating a complex object is simplified.
+* Builder Pattern is the process to create a complex object from underlying 
+  simple objects using a step-by-step approach.
+* A simple example would be, Consider a Class with Setter and Getter Methods,
+  Instead of regular Setters with a Void return Type, imagine a Setter which
+  returns the whole Object itself.
+* This pattern is useful when object cannot be created in single step 
+  such as object de-serialization.
+* **Advantages of Builder Pattern**
+* It provides clear separation between object construction and representation.
+* It provides control over steps of construction process.
+* It enables varying object's internal representation.
 
-// >## JAVA DESIGN PATTERNS BUILDER METHOD PATTERN EXAMPLE
-// >* **STEP 1.**
-// >* Create EmployeeData Class with Setter Methods and Constructor
-// >* Here we have a controlled mechanism in creating an object with specific 
-// >  attributes, user choice of attributes are limited in Object created.
-// >* Only All attributes Constructor and empty Constructor, where Attributes 
-// >  are assigned after object creation.
-// >```
+
+## JAVA DESIGN PATTERNS BUILDER METHOD PATTERN EXAMPLE
+* **STEP 1.**
+* Create EmployeeData Class with Setter Methods and Constructor
+* Here we have a controlled mechanism in creating an object with specific 
+  attributes, user choice of attributes are limited in Object created.
+* Only All attributes Constructor and empty Constructor, where Attributes 
+  are assigned after object creation.
+```java
 package com.tinitiate.designpatterns.builder;
 
 public class EmployeeData {
@@ -66,14 +65,14 @@ public class EmployeeData {
     }
     
 }
-// >```
-// >>
-// >* **STEP 2.**
-// >* Create a **Builder Pattern** Class with **Setter Methods** that return 
-// >  the Current Class Instance as Obect.
-// >* This will enable to create an Object with the desired fields, rather than 
-// >  creating an Object and assigning attributes after Object Creation.
-// >```
+```
+>
+* **STEP 2.**
+* Create a **Builder Pattern** Class with **Setter Methods** that return 
+  the Current Class Instance as Obect.
+* This will enable to create an Object with the desired fields, rather than 
+  creating an Object and assigning attributes after Object Creation.
+```java
 package com.tinitiate.designpatterns.builder;
 
 public class EmployeeDataBuilder {
@@ -109,12 +108,12 @@ public class EmployeeDataBuilder {
         this.Salary = Salary;
     }
 }
-// >```
-// >>
-// >* **Step 3.**
-// >* Here we demonstrate a Caller that creates Objects for Classes 
-// >  EmployeeData and EmployeeDataBuilder, which have same attributes.
-// >```
+```
+>
+* **Step 3.**
+* Here we demonstrate a Caller that creates Objects for Classes 
+  EmployeeData and EmployeeDataBuilder, which have same attributes.
+```java
 package com.tinitiate.designpatterns.builder;
 
 public class EmployeeDataTester {
@@ -149,4 +148,4 @@ public class EmployeeDataTester {
         EDB3.setEmpID(1).setEmpName("ABC");
     }
 }
-// >```
+```
