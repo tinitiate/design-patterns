@@ -30,7 +30,7 @@ ContentName: builder-method-pattern
   attributes, user choice of attributes are limited in Object created.
 * Only All attributes Constructor and empty Constructor, where Attributes 
   are assigned after object creation.
->EmployeeDataBuilder.java
+> EmployeeData.java
 ```java
 package com.tinitiate.designpatterns.builder;
 
@@ -73,6 +73,7 @@ public class EmployeeData {
   the Current Class Instance as Obect.
 * This will enable to create an Object with the desired fields, rather than 
   creating an Object and assigning attributes after Object Creation.
+> EmployeeDataBuilder.java
 ```java
 package com.tinitiate.designpatterns.builder;
 
@@ -114,6 +115,7 @@ public class EmployeeDataBuilder {
 * **Step 3.**
 * Here we demonstrate a Caller that creates Objects for Classes 
   EmployeeData and EmployeeDataBuilder, which have same attributes.
+> EmployeeDataTester.java
 ```java
 package com.tinitiate.designpatterns.builder;
 
